@@ -1,0 +1,766 @@
+* {
+    box-sizing: border-box;
+}
+  
+* {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+head {
+    display: none;
+}
+
+@media (min-width:1024px) {  
+
+#wid {
+    width: 1300px;
+    margin:0 auto;
+}
+
+body{
+    background-color: #fff;
+    font-family: "sofia-pro","Yu Gothic","YuGothic","Roboto","Helvetica Neue","Hiragino Kaku Gothic Pro","Meiryo","Arial","sans-serif";
+    font-size: 15px;
+    color: #000;
+    line-height: 2;
+    letter-spacing: .08em;
+    font-weight: 300;
+}
+
+header {
+    background-color: white;
+    z-index: 9997;
+    transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+    width: 1300px;
+    position: fixed;       /*position 을 fixed 로 줌으로써 상단 메뉴바 고정*/
+    top: 0;
+    margin:0 auto;
+}
+
+header #hd-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:50px;
+    padding-right:90px;
+    margin: auto;
+    height: 100px;
+}
+
+header #hd-main .site-ttl {
+    -webkit-animation: fadeIn .8 ease 0s 1 normal;
+    animation: fadeIn .8 ease 0s 1 normal;
+    transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+    position: relative;
+    top: -5px;
+}
+
+.hov {
+    opacity: 1;
+    transition: opacity 200ms ease-out;
+    transition: all .8s;
+}
+
+.hov img {
+    border-style: none;
+    vertical-align: bottom;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+header #global-nav {
+    z-index: 9998;
+}
+
+header #global-nav>ul {
+    display: flex;
+    justify-content: start;
+    margin: auto;
+    padding-left: 30px;
+    height: 100%;
+}
+
+header #global-nav>ul>li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 15px 25px;
+    position: relative;
+}
+
+header #global-nav>ul>li>a {
+    border-radius: 3px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1;
+    color: #000;
+    letter-spacing: .15em;
+    transition: background-color 200ms ease;
+    text-decoration-line : none;
+}
+
+header #hd-main.scrolled #global-nav a {
+    color: #000;
+}
+
+header #hd-main.scrolled #global-nav a::before {
+    background: #00000020;
+}
+
+header #global-nav>ul>li>a::before {
+    content: "";
+    position: absolute;
+    background: #99a484;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: -15px;
+    transition: width 500ms ease-out;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+header #global-nav>ul>li>a span {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-family: "sofia-pro","sans-serif";
+}
+
+#content {
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+
+section {
+    display: block;
+}
+
+
+.sec1-1 {
+    background-color: #f7f7f7;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.sec1-2 {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.sec1-3 {
+    opacity: 1;
+    animation: view-slideup 1s ease both;
+    width: 900px; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+    margin: 0 auto;
+
+}
+
+.sec1-4 {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    margin-bottom: 50px;
+}
+
+.fz180{
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: .13em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 180%;
+    text-align: center;
+}
+
+.fz110 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 110%;
+    text-align: center;
+}
+
+.section {
+    width: 1200px;
+    padding-left: 55px;
+    text-align: center;
+}
+
+.product{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    float: left;
+}    
+
+.product:hover{
+    background-color: rgba(224, 224, 224, 0.795)
+}   
+
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
+}
+
+img {
+    border-style: none;
+    vertical-align: bottom;
+    backface-visibility: hidden;
+    
+}
+
+.sec-img {
+    width: 280px;
+    height: 200px;
+}
+
+.section-1 {
+    align-items: flex-end;
+    margin-top: 25px;
+}
+
+.section-p{
+    font-family: 'Stylish', sans-serif;
+    letter-spacing: .05em;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.section-p2{
+    font-family: 'Stylish', sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+
+.section2 {
+    width: 1200px;
+    padding-top: 50px;
+    padding-left: 55px;
+    text-align: center;
+}
+
+.section3 {
+    width: 1200px;
+    padding-top: 50px;
+    padding-left: 55px;
+    text-align: center;
+}
+
+.page_wrap {
+	text-align:center;
+	font-size:0;
+    padding-top: 30px;
+    padding-bottom: 50px;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8 url(images/page_pprev.png) no-repeat center center;
+	margin-left:0;
+}
+.page_nation .prev {
+	background:#f8f8f8 url(images/page_prev.png) no-repeat center center;
+	margin-right:7px;
+}
+.page_nation .next {
+	background:#f8f8f8 url(images/page_next.png) no-repeat center center;
+	margin-left:7px;
+}
+.page_nation .nnext {
+	background:#f8f8f8 url(images/page_nnext.png) no-repeat center center;
+	margin-right:0;
+}
+.page_nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*모바일 해상도*/
+
+@media (max-width:1023px) { 
+
+#wid {
+    width: 1300px;
+    margin:0 auto;
+}
+
+body{
+    background-color: #fff;
+    font-family: "sofia-pro","Yu Gothic","YuGothic","Roboto","Helvetica Neue","Hiragino Kaku Gothic Pro","Meiryo","Arial","sans-serif";
+    font-size: 15px;
+    color: #000;
+    line-height: 2;
+    letter-spacing: .08em;
+    font-weight: 300;
+}
+
+header {
+    background-color: white;
+    z-index: 9997;
+    transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+    width: 1300px;
+    position: fixed;       /*position 을 fixed 로 줌으로써 상단 메뉴바 고정*/
+    top: 0;
+    margin:0 auto;
+}
+
+header #hd-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:50px;
+    padding-right:90px;
+    margin: auto;
+    height: 100px;
+}
+
+header #hd-main .site-ttl {
+    -webkit-animation: fadeIn .8 ease 0s 1 normal;
+    animation: fadeIn .8 ease 0s 1 normal;
+    transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+    position: relative;
+    top: -5px;
+}
+
+.hov {
+    opacity: 1;
+    transition: opacity 200ms ease-out;
+    transition: all .8s;
+}
+
+.hov img {
+    border-style: none;
+    vertical-align: bottom;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+header #global-nav {
+    z-index: 9998;
+}
+
+header #global-nav>ul {
+    display: flex;
+    justify-content: start;
+    margin: auto;
+    padding-left: 30px;
+    height: 100%;
+}
+
+header #global-nav>ul>li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 15px 25px;
+    position: relative;
+}
+
+header #global-nav>ul>li>a {
+    border-radius: 3px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1;
+    color: #000;
+    letter-spacing: .15em;
+    transition: background-color 200ms ease;
+    text-decoration-line : none;
+}
+
+header #hd-main.scrolled #global-nav a {
+    color: #000;
+}
+
+header #hd-main.scrolled #global-nav a::before {
+    background: #00000020;
+}
+
+header #global-nav>ul>li>a::before {
+    content: "";
+    position: absolute;
+    background: #99a484;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: -15px;
+    transition: width 500ms ease-out;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+header #global-nav>ul>li>a span {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-family: "sofia-pro","sans-serif";
+}
+
+#content {
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+
+section {
+    display: block;
+}
+
+
+.sec1-1 {
+    background-color: #f7f7f7;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.sec1-2 {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.sec1-3 {
+    opacity: 1;
+    animation: view-slideup 1s ease both;
+    width: 900px; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+    margin: 0 auto;
+
+}
+
+.sec1-4 {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    margin-bottom: 50px;
+}
+
+.fz180{
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: .13em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 180%;
+    text-align: center;
+}
+
+.fz110 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 110%;
+    text-align: center;
+}
+
+.section {
+    width: 1200px;
+    padding-left: 55px;
+    text-align: center;
+}
+
+.product{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    float: left;
+}    
+
+.product:hover{
+    background-color: rgba(224, 224, 224, 0.795)
+}   
+
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
+}
+
+img {
+    border-style: none;
+    vertical-align: bottom;
+    backface-visibility: hidden;
+    
+}
+
+.sec-img {
+    width: 280px;
+    height: 200px;
+}
+
+.section-1 {
+    align-items: flex-end;
+    margin-top: 25px;
+}
+
+.section-p{
+    font-family: 'Stylish', sans-serif;
+    letter-spacing: .05em;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.section-p2{
+    font-family: 'Stylish', sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+}
+    
+    
+.section2 {
+    width: 1200px;
+    padding-top: 50px;
+    padding-left: 55px;
+    text-align: center;
+}
+    
+.section3 {
+    width: 1200px;
+    padding-top: 50px;
+    padding-left: 55px;
+    text-align: center;
+}
+
+footer {
+    width: 1300px;
+    text-align: center center;
+}
+
+.page_wrap {
+	text-align:center;
+	font-size:0;
+    padding-top: 30px;
+    padding-bottom: 50px;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8 url(images/page_pprev.png) no-repeat center center;
+	margin-left:0;
+}
+.page_nation .prev {
+	background:#f8f8f8 url(images/page_prev.png) no-repeat center center;
+	margin-right:7px;
+}
+.page_nation .next {
+	background:#f8f8f8 url(images/page_next.png) no-repeat center center;
+	margin-left:7px;
+}
+.page_nation .nnext {
+	background:#f8f8f8 url(images/page_nnext.png) no-repeat center center;
+	margin-right:0;
+}
+.page_nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
+}
+
+    
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

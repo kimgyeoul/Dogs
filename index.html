@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dogs</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Gaegu&family=Nanum+Brush+Script&family=Nanum+Myeongjo&family=Stylish&display=swap" rel="stylesheet">
+  
+  <script type="text/javascript">
+    var imgNum = 1;
+    var slideOn = setInterval(ChnImg, 2000);
+    
+    function ChnImg(){
+      console.log("img change");
+      console.log(imgNum);
+      if(imgNum == 1){
+      imgNum = 2
+      document.getElementById("slideImg").src = "images/메인 사진_2.jpg" ;
+      } else if(imgNum == 2){
+        imgNum = 3
+      document.getElementById("slideImg").src = "images/유기견 사진_5.jpg";
+      } else if(imgNum == 3){
+        imgNum = 1
+      document.getElementById("slideImg").src = "images/유기견 사진_3.jpg";
+      } else {
+        document.getElementById("slideImg").src = "images/메인 사진_1.jpg";
+      }
+}
+
+  </script>
+
+</head>
+<body>
+  <div id = wid>
+    <header>
+      <div id = "hd-main" class="scrolled">
+        <h1 class = "site-ttl">
+          <a class = "hov"  href="http://k7s7kim.dothome.co.kr/index.html">
+            <img src="images/로고.JPG" alt="유기견 홈페이지" width="160" height="90">
+          </a>
+        </h1>
+        <nav id="global-nav">
+          <ul>
+            <li>
+              <a href="http://k7s7kim.dothome.co.kr/adopt.html" ::before>
+                <span>adopt</span>
+                유기견 무료 분양
+              </a>
+            </li>
+            <li>
+              <a href="http://k7s7kim.dothome.co.kr/volunteer.html" ::before>
+                <span>volunteer & support</span>
+                자원봉사 & 후원요청
+              </a>
+            </li>
+            <li>
+              <a href="http://k7s7kim.dothome.co.kr/location.html" ::before>
+                <span>location</span>
+                찾아오시는 길
+              </a>
+            </li>
+            <li>
+              <a href="http://k7s7kim.dothome.co.kr/login.html" ::before>
+                <span>login</span>
+                로그인
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="hero" ::after>
+      <div class="bx-wrapper" style="max-width: 100%;"></div>
+      </div>
+      <--sec-->
+      <section id="sec1" class="mt50 md-mt30 sm-mt15 plr50 md-plr30 sm-plr15">
+        <div class="bgc-lightgray ptb100 md-ptb70 sm-ptb50 sm-plr10">
+          <div class="cols-filld-full ai-c jc-c">
+            <div class="col-6 col-md-5 col-sm-8 view view-slideup ord1 sm-ord2 sm-d-n on">
+              <figure class="sec1-img">
+                <img id="slideImg" src="images/메인 사진_1.jpg" width="600" height="410" class="img-rspsv" ></div>
+              </figure>
+            </div>
+            <div class="txt0">
+                <p class="txt1">
+                  저를 키워주세요!
+                </p>
+              <p class="txt2">
+                유기견의 수명은 21일이 채 되지 않습니다.  
+                <br>
+                주인이 나타나지 않는 유기견은 짧게는 7일. 
+                <br>
+                길게는 21일 동안 보호소에 머물다 안락사를 당합니다. 
+              </p>
+              <p class="txt3">
+                당신의 작은 관심이 유기견의 생명을 구할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main> 
+    <!--footer-->
+    <footer class="footer">
+      <div class="cv-area">
+        <div class="cols">
+          <div class="cols2">
+            <h3 class="fz170">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">문의하기</font>
+              </font>
+            </h3>
+            <a href="" class="ft-cv" ::before>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">contact form</font>
+              </font>
+            </a>
+            <p class="mt30">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">부담없이 문의주세요</font>
+              </font>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>  
+</body>
+</html>
